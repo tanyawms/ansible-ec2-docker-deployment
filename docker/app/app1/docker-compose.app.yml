@@ -1,7 +1,7 @@
 mariadb:
   image: mariadb
   environment:
-      MYSQL_ROOT_PASSWORD: ramit
+      MYSQL_ROOT_PASSWORD: tanya
 wordpress:
   image: wordpress
   links:

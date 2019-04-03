@@ -1,7 +1,7 @@
 #!/bin/bash
 
-FOLDER_PATH='$HOME/projects/personal/ansible-ec2-docker-deployment/'
-EC2_PEM_FILE='$HOME/Downloads/ramit-rean.pem'
+FOLDER_PATH='$HOME/ansible-ec2-docker-deployment/'
+EC2_PEM_FILE='$HOME/.ssh/Fortanya.pem'
 
 VPC_PROVISION_FILE='vpc-provision.yml'
 EC2_FILE='provision.yml'
@@ -39,11 +39,10 @@ DeployPlaybook $EC2_FILE
 cd $FOLDER_PATH/deploy/
 ConfigurePlaybook $EC2_CONFIG_FILE $EC2_PEM_FILE
 
-## Configuring ELK 
+## Configuring ELK
 cd $FOLDER_PATH/docker/elk/
 ConfigurePlaybook $ELK_CONFIG_FILE $EC2_PEM_FILE
 
 ## Configuring Wordpress
 cd $FOLDER_PATH/docker/app/
 ConfigurePlaybook $APP_CONFIG_FILE $EC2_PEM_FILE
-

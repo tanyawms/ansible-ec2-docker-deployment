@@ -7,10 +7,10 @@ ami_id: ami-06b5810be11add0e2
 instance_type: t2.micro
 
 # Key pair name
-key_name: ramit-rean
+key_name: Fortanya
 
 # Tags
-tags_used: aws-docker-ansible 
+tags_used: aws-docker-ansible
 
 # CIDR Range
 cidr_range: */32
